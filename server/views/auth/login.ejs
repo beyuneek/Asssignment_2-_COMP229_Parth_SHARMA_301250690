@@ -1,0 +1,46 @@
+<%-include ('../partials/header.ejs');%>
+<%-include ('../partials/main_nav.ejs');%>
+  
+ <body style="background-color:lightgrey;">
+    <!--message Area-->
+   
+   
+    <% if (messages.length>0){%>
+        <div class="alert alert-danger">
+            <%=messages%>
+            </div>
+            <%}%>
+            
+                    <h1>Please login</h1>
+                     <br><br> <br><br>
+                    <form method="POST" autocomplete="off">
+                        
+                            <label for="username"><b>username:</b></label>
+                            <input type="text" class="form-control"
+                            name= "username" placeholder = "Enter username"
+                            id ="username" required autofocus>
+                             <br><br>
+                             <label for="password"><b>Password:</b></label>
+                             <input type="password" class="form-control"
+                             name="password"
+                             placeholder = "Enter password"
+                             id ="password" required>
+                             <br>
+                             or
+                             <a href="/register">Register Here</a>
+                              
+                             <fieldset class="form-group text-right">
+                                    <input type="submit" class="btn btn-success" value="Login">
+                                    <a href="/">
+                                   <input type="button" class="btn btn-warning" value="cancel">
+                                    </a>
+                                    </fieldset>
+                        </form>
+                    </div>
+                </div>
+    </main>
+
+  
+   <%-include ('../partials/bottom_nav.ejs');%>
+<%-include ('../partials/footer.ejs');%>   
+

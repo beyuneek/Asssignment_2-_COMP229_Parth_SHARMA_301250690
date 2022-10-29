@@ -1,0 +1,57 @@
+<%-include ('../partials/header.ejs');%>
+<%-include ('../partials/main_nav.ejs');%>
+
+<!--content for the Add page-->
+
+    <body style="background-color:lightgrey;">
+  <h1>Edit Contact</h1>
+            <br><br>
+        
+        <form class = "form" method="POST">
+            <div class ="form group">
+                <label for="nameTextField"><b>Contact Name:</b></label>
+                <br>
+                <input type="text" class="form control"
+                id="nameTextField"
+                placeholder="Enter the Book Title"
+                name="name"
+                value="<%=book.name%>"
+                required>
+            
+           <br>
+
+            <label for="publishedTextField"><b>Contact Email: </b></label>
+            <br>
+            <input type="text" class="form control"
+            id="publishedTextField"
+            placeholder="Enter email here!"
+            name="published" 
+            value="<%=book.published%>"
+            required>
+          <br>
+
+            <label for="authorTextField"><b>Contact Phone Number: </b></label>
+            <br>
+            <input type="text" class="form control"
+             id="authorTextField"
+             placeholder="Enter Phone Number"
+             name="author" 
+             value="<%=book.author%>"
+             required>
+
+
+            <br><br>
+            
+            <button class = "btn btn-primary" type="submit"><i class ="fas fa-edit"></i>submit</button>
+            <a href='/bookList' class="btn btn-warning"><i class="fas fa-undo"></i>cancel</a>  
+        
+        </form>
+        </div>
+        </div>
+    </div>
+            <br><br>            <br><br>
+
+  
+<%- include('../partials/bottom_nav'); -%>
+<%- include('../partials/footer'); -%>
+
